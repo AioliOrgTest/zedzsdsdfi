@@ -1,0 +1,52 @@
+{
+  "name": "zedzsdsdfi",
+  "version": "0.0.1",
+  "description": "zefzef",
+  "main": "index.mjs",
+  "engines": {
+    "node": ">=22.4.1"
+  },
+  "scripts": {
+    "lint": "eslint --config eslint.config.mjs .",
+    "load-secrets": "npx psl render .env.template --awsprofile psl > .env",
+    "start": "per-env",
+    "start:development": "npx dotenv nodemon index.mjs",
+    "start:production": "node index.mjs",
+    "test": "npm run test:pipeline",
+    "test:pipeline": "NODE_ENV=test npx dotenv -e .env.test -o -- mocha --require tests/helpers/mochaHooks.mjs --exit --ui bdd --reporter spec --colors tests/**/**/**/*.test.mjs --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AioliOrgTest/zedzsdsdfi"
+  },
+  "author": "AioliOrgTest",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@skillsoft-security-chapter/percipiosecretloader": "^3.1.3",
+    "@stylistic/eslint-plugin-js": "^2.9.0",
+    "body-parser": "1.20.3",
+    "chai": "^5.1.1",
+    "compress": "0.99.0",
+    "compression": "1.7.5",
+    "cookie-parser": "1.4.7",
+    "cors": "2.8.5",
+    "dotenv-cli": "^7.4.2",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "helmet": "8.0.0",
+    "joi": "17.13.3",
+    "mocha": "^10.7.3",
+    "morgan": "1.10.0",
+    "nock": "13.5.6",
+    "nodemon": "^3.1.7",
+    "supertest": "7.0.0",
+    "winston": "3.17.0"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "newrelic": "^12.5.1",
+    "per-env": "^1.0.2"
+  }
+}
