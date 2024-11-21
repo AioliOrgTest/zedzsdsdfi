@@ -1,0 +1,12 @@
+d_env_data_NEW_RELIC_APP_NAME: 'Staging - zedzsdsdfi'
+newrelic:
+  labels: null
+
+ingress_external:
+  host: manifest_not_included_in_this_profile
+
+ingress_restricted:
+  host: use1-stage-zedzsdsdfi.percipio.com
+
+virtualservice_restricted:
+  host: use1-stage-zedzsdsdfi.percipio.com
