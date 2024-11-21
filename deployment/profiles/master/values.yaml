@@ -1,0 +1,14 @@
+newrelic:
+  labels: 'Environment:AWS-Master;Team:AioliOrgTest;Service:zedzsdsdfi'
+
+ingress_external:
+  enabled: false
+  host: zedzsdsdfi.master.squads-dev.com
+
+ingress_restricted:
+  enabled: true
+  host: zedzsdsdfi.master.squads-dev.com
+
+virtualservice_restricted:
+  enabled: false
+  host: use1-master-zedzsdsdfi.percipio.com
