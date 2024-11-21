@@ -1,0 +1,13 @@
+#DOCUMENTATION: https://skillsoftdev.atlassian.net/wiki/spaces/devops/pages/3363799041/Service+Source+of+Truth+-+The+new+.skillsoft+file
+harnessServiceName: zedzsdsdfi
+healthCheckAll: true
+healthCheckAllUser: zedzsdsdfi-username-<+env.name>
+healthCheckAllPassword: zedzsdsdfi-password-<+env.name>
+includeCDTests: [UI,BFF,BE]
+newRelicAppName: zedzsdsdfi
+podAnnotations:
+  jiraKey: ENGSEC
+  repo: https://github.skillsoft.com/AioliOrgTest/zedzsdsdfi
+  squad: ENGSEC
+runCDTests: false
+slackNotificationChannel: ENGSEC-squad
